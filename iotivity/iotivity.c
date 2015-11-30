@@ -7,6 +7,7 @@
 #include "../common/XW_Extension.h"
 #include "../common/XW_Extension_SyncMessage.h"
 
+extern const char kSource_iotivity_api[];
 XW_Extension g_extension = 0;
 const XW_CoreInterface* g_core = NULL;
 const XW_MessagingInterface* g_messaging = NULL;
@@ -33,7 +34,7 @@ void shutdown(XW_Extension extension) {
 }
 
 int32_t XW_Initialize(XW_Extension extension, XW_GetInterface get_interface) {
-  static const char* kAPI = ""; //kSource_iotivity_api;  // generated from iotivity_api.js
+  static const char* kAPI = kSource_iotivity_api;  // generated from iotivity_api.js
   g_extension = extension;
   g_core = get_interface(XW_CORE_INTERFACE);
   g_core->SetExtensionName(extension, "iotivity");
