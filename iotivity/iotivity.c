@@ -4,8 +4,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "../common/XW_Extension.h"
-#include "../common/XW_Extension_SyncMessage.h"
+#include "../xw_extension/XW_Extension.h"
+#include "../xw_extension/XW_Extension_SyncMessage.h"
 
 extern const char kSource_iotivity_api[];
 XW_Extension g_extension = 0;
