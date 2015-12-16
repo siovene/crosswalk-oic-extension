@@ -6,4 +6,4 @@ EXTENSION_LIB="libcrosswalk-oic.so"
 
 mkdir -p out/$ARCH
 python iotivity/generate_api.py iotivity/iotivity_api.js kSource_iotivity_api iotivity/iotivity_api.c
-$CC -O0 -g -fPIC -rdynamic -shared -m32 -Wl,--hash-style=sysv -o out/$ARCH/$EXTENSION_LIB iotivity/iotivity_api.c iotivity/iotivity.c
+$CC -O0 -g -fPIC -rdynamic -shared -m32 -Wl,--hash-style=sysv -o out/$ARCH/$EXTENSION_LIB iotivity/iotivity_api.c iotivity/iotivity_extension.c
