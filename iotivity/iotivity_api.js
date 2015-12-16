@@ -23,11 +23,13 @@ extension.setMessageListener(function(msg) {
 //  \___/ \__|_|_|_|\__|_|\___||___/
 //
 // ============================================================================
+//
 exports.__utils = function() {
     this.sendSyncMessage = function(msg) {
         extension.internal.sendSyncMessage(JSON.stringify(msg));
     }
 };
+
 
 // ============================================================================
 //  _                       _                _      _    ____ ___
