@@ -1,2 +1,3 @@
 *.swp
 /out
+/iotivity/iotivity_api.c
