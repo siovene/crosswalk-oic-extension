@@ -24,9 +24,9 @@ extension.setMessageListener(function(msg) {
 //
 // ============================================================================
 //
-exports.__utils = function() {
-    this.sendSyncMessage = function(msg) {
-        extension.internal.sendSyncMessage(JSON.stringify(msg));
+exports.__utils = {
+    sendSyncMessage: function(msg) {
+        return extension.internal.sendSyncMessage(JSON.stringify(msg));
     }
 };
 
@@ -40,11 +40,11 @@ exports.__utils = function() {
 //
 // ============================================================================
 
-exports.lowleverl = function() {
-    this.OCInit = function() {
+exports.__lowlevel = {
+    OCInit: function() {
         return iotivity.__utils.sendSyncMessage({
-            method: "OCInit",
-            args: []
+            method: "OCInit"
         });
-    };
+    }
 };
+
